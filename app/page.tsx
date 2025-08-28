@@ -1,5 +1,5 @@
-import NewHomepage from "@/components/new-homepage"
+import { UpdatedHomepage } from "@/components/updated-homepage"
 
 export default function Home() {
-  return <NewHomepage />
+  return <UpdatedHomepage />
 }
