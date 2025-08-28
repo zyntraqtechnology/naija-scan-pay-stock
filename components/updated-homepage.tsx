@@ -204,7 +204,7 @@ export function UpdatedHomepage() {
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
-                <img src="/images/OranjPay-White.png" alt="OranjPay Logo" className="h-8" />
+                <span className="text-white text-xl font-bold">OranjPay</span>
               </div>
               <p className="text-gray-400 text-sm">&copy; {currentYear} OranjPay. All rights reserved.</p>
             </div>
