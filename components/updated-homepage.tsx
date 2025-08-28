@@ -94,10 +94,9 @@ export function UpdatedHomepage() {
       <TestimonialsSlider />
 
       {/* Free Trial Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50">
         {/* Aurora Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 opacity-70"></div>
-        <div className="absolute inset-0 bg-[url('/celestial-dance.png')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
