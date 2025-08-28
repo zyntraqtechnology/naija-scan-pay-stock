@@ -400,7 +400,7 @@ export default function OrdersPage() {
       <TransactionDetailsSheet
         isOpen={!!openTransactionId}
         onClose={() => setOpenTransactionId(null)}
-        transaction={selectedTransaction}
+        transaction={selectedTransaction || null}
       />
     </div>
   )

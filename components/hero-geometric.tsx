@@ -95,15 +95,15 @@ export default function HeroGeometric({
 }) {
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
+    visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 1,
-        delay: 0.5 + i * 0.2,
-        ease: [0.25, 0.4, 0.25, 1],
+        delay: 0.5,
+        ease: "easeOut",
       },
-    }),
+    },
   }
 
   return (
@@ -160,17 +160,20 @@ export default function HeroGeometric({
       <div className="relative z-10 container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
-            custom={0}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 border border-gray-200 mb-8 md:mb-12"
           >
             <Image src="/images/OranjPay-Favicon-Circle.png" alt="OranjPay" width={20} height={20} priority />
             <span className="text-base text-gray-600 tracking-wide">{badge}</span>
           </motion.div>
 
-          <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-700">{title1}</span>
               <br />
@@ -186,7 +189,11 @@ export default function HeroGeometric({
             </h1>
           </motion.div>
 
-          <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.7 }}
+          >
             <p
               className={cn(
                 "text-lg sm:text-xl md:text-2xl text-gray-500 mb-8 leading-relaxed tracking-wide max-w-xl mx-auto px-4",
@@ -199,10 +206,9 @@ export default function HeroGeometric({
           </motion.div>
 
           <motion.div
-            custom={3}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.9 }}
             className="flex flex-wrap gap-4 justify-center"
           >
             <Link

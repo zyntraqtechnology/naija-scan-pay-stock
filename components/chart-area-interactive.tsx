@@ -152,8 +152,8 @@ export function ChartAreaInteractive() {
           <ChartContainer config={chartConfig} className="w-full h-full">
             <AreaChart
               data={filteredData}
-              width="100%"
-              height="100%"
+              width={800}
+              height={300}
               margin={{
                 left: 12,
                 right: 12,

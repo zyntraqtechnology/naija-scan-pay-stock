@@ -99,7 +99,7 @@ export default function POSPage() {
   }
 
   const currentBranch = branches.find((b) => b.id === selectedBranch)
-  const currentTerminals = terminals[selectedBranch] || []
+  const currentTerminals = terminals[selectedBranch as keyof typeof terminals] || []
   const currentTerminal = currentTerminals.find((t) => t.id === activeTerminal) || currentTerminals[0]
 
   const quickActions = [
@@ -289,7 +289,7 @@ export default function POSPage() {
                     <SelectValue placeholder="Select terminal" />
                   </SelectTrigger>
                   <SelectContent>
-                    {currentTerminals.map((terminal) => (
+                    {currentTerminals.map((terminal: any) => (
                       <SelectItem key={terminal.id} value={terminal.id}>
                         <div className="flex items-center gap-2">
                           <div

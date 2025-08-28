@@ -219,7 +219,7 @@ export default function StorefrontsPage() {
 
               map.current!.easeTo({
                 center: (features[0].geometry as any).coordinates,
-                zoom: zoom,
+                zoom: zoom ?? undefined,
               })
             },
           )

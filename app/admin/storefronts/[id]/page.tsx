@@ -82,7 +82,7 @@ const storefronts = [
     employees: 3,
     status: "Active",
     createdAt: "Mar 10, 2023",
-    coordinates: [7.4951, 9.0579], // Abuja coordinates
+    coordinates: [7.4951, 9.0579] as [number, number], // Abuja coordinates
     email: "branch@oranjpay.com",
     phone: "+234 987 654 3210",
     openingHours: "9:00 AM - 7:00 PM",
@@ -143,7 +143,7 @@ export default function StorefrontDetailPage() {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: "mapbox://styles/mapbox/light-v11",
-        center: storefront.coordinates,
+        center: storefront.coordinates as [number, number],
         zoom: 14,
       })
 
@@ -159,7 +159,7 @@ export default function StorefrontDetailPage() {
         markerEl.style.boxShadow = "0 3px 6px rgba(0,0,0,0.3)"
 
         // Add marker to map
-        new mapboxgl.Marker(markerEl).setLngLat(storefront.coordinates).addTo(map.current!)
+        new mapboxgl.Marker(markerEl).setLngLat(storefront.coordinates as [number, number]).addTo(map.current!)
       })
     }
 

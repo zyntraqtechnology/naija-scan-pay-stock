@@ -2208,7 +2208,7 @@ export default function CashierPage() {
               <label htmlFor="discountType" className="text-right">
                 Type
               </label>
-              <Select value={discountType} onValueChange={setDiscountType}>
+              <Select value={discountType} onValueChange={(value: "amount" | "percentage") => setDiscountType(value)}>
                 <SelectTrigger className="col-span-3">
                   <SelectValue placeholder="Select a type" />
                 </SelectTrigger>
@@ -2284,7 +2284,7 @@ export default function CashierPage() {
               <label htmlFor="loyaltyType" className="text-right">
                 Type
               </label>
-              <Select value={loyaltyType} onValueChange={setLoyaltyType}>
+              <Select value={loyaltyType} onValueChange={(value: "giftCard" | "loyalty") => setLoyaltyType(value)}>
                 <SelectTrigger className="col-span-3">
                   <SelectValue placeholder="Select a type" />
                 </SelectTrigger>

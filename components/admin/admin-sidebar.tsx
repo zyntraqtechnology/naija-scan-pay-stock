@@ -135,8 +135,8 @@ export function AdminSidebar() {
     logout()
   }
 
-  const renderNavLinks = (routes) => {
-    return routes.map((route, i) => {
+  const renderNavLinks = (routes: any[]) => {
+    return routes.map((route: any, i: number) => {
       const NavLink = (
         <Link
           key={i}

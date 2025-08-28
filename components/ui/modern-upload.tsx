@@ -14,6 +14,7 @@ interface ModernUploadProps {
   className?: string
   placeholder?: string
   description?: string
+  defaultPreview?: string
 }
 
 export function ModernUpload({
@@ -24,6 +25,7 @@ export function ModernUpload({
   className,
   placeholder = "Drop files here or click to upload",
   description = "Supports JPG, PNG, GIF up to 10MB",
+  defaultPreview,
 }: ModernUploadProps) {
   const [isDragOver, setIsDragOver] = useState(false)
   const [files, setFiles] = useState<File[]>([])

@@ -232,7 +232,17 @@ export default function TransactionsPage() {
         <TransactionDetailsSheet
           isOpen={isDetailsOpen}
           onClose={() => setIsDetailsOpen(false)}
-          transaction={selectedTransaction}
+      transaction={selectedTransaction ? { 
+        ...selectedTransaction, 
+        total: selectedTransaction.amount,
+        items: selectedTransaction.items?.map(item => ({
+          name: item.name,
+          quantity: item.quantity,
+          unit: item.unit,
+          unitAmount: item.unitPrice,
+          totalAmount: item.totalPrice
+        }))
+      } : null}
         />
       )}
     </div>

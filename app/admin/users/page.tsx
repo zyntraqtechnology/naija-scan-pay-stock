@@ -106,7 +106,7 @@ export default function UsersPage() {
     })
   }
 
-  const handleUpdateUser = (user) => {
+  const handleUpdateUser = (user: any) => {
     setSelectedUser(user)
     setOpenUpdateDialog(true)
   }
