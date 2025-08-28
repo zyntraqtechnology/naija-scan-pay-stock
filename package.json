@@ -50,6 +50,7 @@
     "date-fns": "latest",
     "embla-carousel-react": "^8.0.0-rc14",
     "framer-motion": "latest",
+    "lovable-tagger": "^1.1.9",
     "lucide-react": "^0.454.0",
     "mapbox-gl": "latest",
     "next": "14.2.16",
