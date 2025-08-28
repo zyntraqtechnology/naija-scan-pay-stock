@@ -28,7 +28,7 @@ export function UpdatedHomepage() {
             </div>
             <div className="flex justify-center">
               <img
-                src="/data-overview-dashboard.png"
+                src="https://zyntraqtech.com/wp-content/uploads/2025/04/OranjPay-White-1.png"
                 alt="OranjPay Dashboard"
                 className="rounded-lg shadow-2xl max-w-full h-auto"
               />
