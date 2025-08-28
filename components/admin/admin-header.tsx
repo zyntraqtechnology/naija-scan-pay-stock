@@ -7,9 +7,12 @@ import { CommandSearch } from "./command-search"
 interface AdminHeaderProps {
   title?: string
   description?: string
+  actions?: React.ReactNode
+  breadcrumbs?: Array<{ label: string; href: string }>
+  breadcrumb?: Array<{ title: string; href: string }>
 }
 
-export function AdminHeader({ title, description }: AdminHeaderProps) {
+export function AdminHeader({ title, description, actions, breadcrumbs, breadcrumb }: AdminHeaderProps) {
   const { toggleSidebar, isCollapsed } = useSidebar()
 
   return (
@@ -49,6 +52,11 @@ export function AdminHeader({ title, description }: AdminHeaderProps) {
         </div>
 
         <div className="flex items-center gap-4">
+          {actions && (
+            <div className="flex items-center gap-2">
+              {actions}
+            </div>
+          )}
           <div className="md:hidden">
             <button
               onClick={() => document.dispatchEvent(new KeyboardEvent("keydown", { key: "k", ctrlKey: true }))}

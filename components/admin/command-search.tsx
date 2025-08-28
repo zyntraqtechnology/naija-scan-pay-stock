@@ -52,7 +52,7 @@ export function CommandSearch() {
           <span className="ml-1">K</span>
         </div>
       </button>
-      <CommandDialog open={open} onOpenChange={setOpen} className="rounded-xl shadow-xl border border-gray-200">
+      <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Search dashboard..." className="h-12" />
         <CommandList className="max-h-[400px]">
           <CommandEmpty>No results found.</CommandEmpty>

@@ -120,7 +120,7 @@ export default function AnalyticsPage() {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <DateRangePicker dateRange={dateRange} onDateRangeChange={setDateRange} />
+          <DateRangePicker date={dateRange} onDateChange={setDateRange} />
           <Button variant="outline">
             <Download className="mr-2 h-4 w-4" />
             Export

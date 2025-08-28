@@ -92,7 +92,7 @@ export function BankTransferModal({ isOpen, onClose, amount = 0 }: BankTransferM
   }
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose} className="w-full max-w-none">
+    <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-full w-screen h-screen max-h-screen p-0 rounded-none">
         <div className="flex h-full">
           {/* Left side - Bank selection */}

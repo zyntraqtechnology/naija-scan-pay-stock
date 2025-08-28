@@ -15,6 +15,7 @@ import { Combobox } from "@/components/ui/combobox"
 import { PeriodComparison } from "@/components/ui/period-comparison"
 import { DateRangePicker } from "@/components/ui/date-range-picker"
 import { subDays } from "date-fns"
+import type { DateRange } from "react-day-picker"
 
 // Sample customer data
 const customers = [
@@ -129,7 +130,7 @@ export default function DashboardPage() {
   const [activeTab, setActiveTab] = useState("overview")
   const [customerType, setCustomerType] = useState("all")
   const { user } = useAuth()
-  const [dateRange, setDateRange] = useState({
+  const [dateRange, setDateRange] = useState<DateRange | undefined>({
     from: subDays(new Date(), 6),
     to: new Date(),
   })

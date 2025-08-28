@@ -63,7 +63,7 @@ export function CommandBar() {
           <span>{isMac ? "⌘" : "CTRL"}+F</span>
         </div>
       </button>
-      <CommandDialog open={open} onOpenChange={setOpen} className="top-20 translate-y-0">
+      <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." className="h-12" />
         <CommandList className="max-h-[500px]">
           <CommandEmpty>No results found.</CommandEmpty>
