@@ -191,14 +191,14 @@ export function ChartAreaInteractive() {
                 cursor={{ stroke: "#e5e7eb", strokeWidth: 1 }}
                 content={
                   <ChartTooltipContent
-                    labelFormatter={(value) => {
+                    labelFormatter={(value: any) => {
                       return new Date(value).toLocaleDateString("en-US", {
                         month: "short",
                         day: "numeric",
                       })
                     }}
                     indicator="dot"
-                    formatter={(value, name) => {
+                    formatter={(value: any, name: any) => {
                       if (name === "sales") {
                         return [`₦${Number(value).toLocaleString()}`, "Sales"]
                       }

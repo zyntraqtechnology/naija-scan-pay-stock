@@ -83,25 +83,10 @@ export default function UsersPage() {
     }
   }
 
-  // Show toast notification
   const showUserUpdatedToast = (userName: string) => {
     toast({
-      title: (
-        <div className="flex items-center gap-2">
-          <div className="h-6 w-6 rounded-full bg-green-500 flex items-center justify-center">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 3L4.5 8.5L2 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-          <span>{`"${userName}" details updated`}</span>
-        </div>
-      ),
-      description: (
-        <div className="flex gap-4">
-          <button className="text-sm font-medium">Undo</button>
-          <button className="text-sm font-medium">View profile</button>
-        </div>
-      ),
+      title: "User Updated Successfully",
+      description: `${userName} has been updated successfully.`,
       variant: "default",
     })
   }
